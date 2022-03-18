@@ -147,7 +147,7 @@ namespace TestSonarQube
         }
 
 
-        public string Hash2(string password)
+        public string Hash2f(string password)
         {
             var salt = Encoding.UTF8.GetBytes("Hardcoded salt");
             var fromHardcoded = new Rfc2898DeriveBytes(password, salt);     // Noncompliant, salt is hardcoded
